@@ -1,0 +1,140 @@
+* {
+    background-color: black;
+    border-color: rgb(47, 51, 54);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wd-search-row {
+    display: flex;
+}
+
+.wd-search-row > * {
+    padding: 5px;
+    margin: 2px 2px 2px 16px;
+}
+
+.wd-search-bar {
+    background-color: darkgray;
+    color: white;
+    width: 100%;
+    padding-left: 16px;
+    border-radius: 50px;
+}
+
+.wd-explore-settings {
+    margin-right: 12px;
+}
+
+.wd-hyperlink-headers {
+    display: flex;
+    overflow: auto;
+    margin-left: 16px;
+}
+
+.wd-hyperlink-headers > * {
+    font-size: 15px;
+    padding: 16px;
+    color: rgb(110, 118, 125);
+    text-decoration: none;
+    border: none;
+}
+
+.wd-selected-tag {
+    border-bottom: 3px solid rgb(29,161,242);
+    color: rgb(29,161,242);
+
+}
+
+.wd-suggested-content {
+    display: flex;
+    margin-left: 16px;
+    flex-direction: column;
+}
+
+.wd-tuit {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    padding: 5px 5px 5px 16px;
+    width: 100%;
+}
+
+.wd-small-text{
+    color: rgb(110, 118, 125);
+    padding: 1px 0;
+}
+
+.wd-large-text {
+    color: white;
+    padding: 1px 0;
+}
+
+hr {
+    width: 100%;
+}
+
+.wd-horizontal-tuit-content {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.wd-dots {
+    margin-right: 16px;
+    font-size: 15px;
+}
+
+.wd-image-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 20%;
+    margin-right: 16px;
+}
+.wd-container-book {
+    display: flex;
+    width: 50%;
+    overflow: hidden;
+}
+
+.wd-align-left {
+    flex-basis : 10%;
+    padding-left: 16px;
+}
+
+.wd-align-right {
+    padding-left: 12px;
+    flex-flow: column wrap;
+}
+
+.wd-rounded-corners-top {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.wd-round-logo {
+    height: 13px;
+    border-radius: 50%;
+    width: 13px;
+}
+
+.wd-rounded-corners-bottom {
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.wd-bor {
+    border: 1px solid rgb(47,51,54);
+    border-top: none;
+}
+
+.wd-g {
+    color: rgb(110,118,125);
+}
+
+.wd-red {
+    color: red;
+}
+
+.wd-equal {
+    padding-left: 25px;
+}
