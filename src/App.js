@@ -1,32 +1,30 @@
-import './App.css';
-import './vendors/bootstrap/css/bootstrap.min.css';
-import './vendors/bootstrap/bootstrap.min.css';
-import './vendors/fontawesome/css/all.css';
-
-import HelloWorld from "./components/hello-world";
-import Labs from "./components/labs";
-import Tuiter from "./components/tuiter";
-import {BrowserRouter, Route, Routes}
-    from "react-router-dom";
+import logo from "./logo.svg";
+import "./App.css";
+import HelloWorld from "./components/HelloWorld";
+import Labs from "./components/Labs";
+import Tuiter from "./components/Tuiter";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomeScreen from "./components/Tuiter/home-screen";
+import ExploreScreen from "./components/Tuiter/explore-screen";
 
 function App() {
     return (
         <BrowserRouter>
             <div className="container">
                 <Routes>
-                    <Route path="/"
-                           exact={true}
-                           element={<Labs/>}/>
-                    <Route path="/tuiter"
-                           exact={true}
-                           element={<Tuiter/>}/>
-                    <Route path="/hello"
-                           exact={true}
-                           element={<HelloWorld/>}/>
+                    <Route path="/hello" element={<HelloWorld />} exact={true} />
+                    <Route path="/" element={<Labs />} exact={true} />
+                    <Route path="/labs" element={<Labs />} exact={true} />
+                    <Route path="/tuiter" element={<HomeScreen />} exact={true} />
+                    <Route path="/tuiter/home" element={<HomeScreen />} exact={true} />
+                    <Route
+                        path="/tuiter/explore"
+                        element={<ExploreScreen />}
+                        exact={true}
+                    />
                 </Routes>
             </div>
         </BrowserRouter>
     );
 }
-
 export default App;
