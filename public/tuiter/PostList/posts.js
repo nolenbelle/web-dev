@@ -1,42 +1,40 @@
-const posts = [
+export default [
     {
-        avatarImage:
-            "https://pbs.twimg.com/profile_images/1489375145684873217/3VYnFrzx_200x200.jpg",
-        userName: "Elon Musk",
-        handle: "elonmusk",
-        verified: true,
-        time: "23h",
-        content:
-            "Amazing show about <a href='https://twitter.com/inspiration4x' target='_blank'>@Inspiration4x</a> mission!",
-        preview: {
-            image:
-                "https://pbs.twimg.com/card_img/1494914144826499072/LSbNuftg?format=jpg&name=small",
-            title: "Countdown: Inspiration4 Mission to Space | Netflix Official Site",
-            description:
-                "From training to launch to landing, this all-access docuseries rides along with the Inspiration4 crew on the first all-civilian orbital space mission.",
-            link: "netflix.com",
-            refLink: "https://t.co/0nQua4jGiz"
-        },
-        comments: "4.2K",
-        likes: "37.5K",
-        retuits: "3.5K",
+        profile_picture: '../../images/mac-jones.jpg',
+        userName: 'ReactJS',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec rhoncus tortor. ' +
+            'Pellentesque laoreet felis vitae imperdiet pharetra. Duis gravida euismod ligula. Mauris turpis enim.',
+        time: '2h',
+        title: 'React.js is a component based front end library that makes it very easy to build Single Page ' +
+            'Applications or SPAs',
+        card_image: '../../images/mac_jones2.jpg',
+        handle: '@React',
+        likes: '12k',
+        retweets: '456'
     },
     {
-        avatarImage:
-            "https://pbs.twimg.com/profile_images/966372680306868224/60wfGe9e_normal.jpg",
-        userName: "New York Post",
-        handle: "nypost",
-        verified: true,
-        time: "23h",
-        content:
-            "Grimes seen reading Karl Marx following split with world's richest man Elon Musk  <a href='https://trib.al/nx2Gfaq' target='_blank'>trib.al/nx2Gfaq</a>",
-        preview: {
-            image:
-                "https://pbs.twimg.com/media/FAuW_6SX0Ao0xvc?format=jpg&name=small",
-        },
-        comments: "965",
-        likes: "4K",
-        retuits: "2.4K",
+        profile_picture: '../../images/nbc_olympics.jpg',
+        userName: 'NBC Olympics',
+        time: '1 day',
+        body: 'Ryan Chocran-Siegle Wins Silver at Olympics',
+        card_image: '../../images/rcs.jpg',
+        card_title: 'RCS makes his way down the slope',
+        likes: '123K',
+        handle: '@NBCOlympics',
+        retweets: '2k'
     },
+    {
+        profile_picture: "../../images/nyt.jpg",
+        userName: 'New York Times',
+        body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec rhoncus tortor. ' +
+            'Pellentesque laoreet felis vitae imperdiet pharetra. Duis gravida euismod ligula. Mauris turpis enim.',
+        time: '1h',
+        card_image: '../../images/ukraine.png',
+        card_title: 'The World Stands with Ukraine',
+        card_text: 'Slava Ukraini!',
+        likes: '120K',
+        retweets: '42k',
+        handle: '@nyt',
+        comments: '8k'
+    }
 ];
-export default posts;

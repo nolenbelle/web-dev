@@ -1,80 +1,64 @@
-const links = [
-    {
-        id: "home",
-        path: "../HomeScreen/home.html",
-        label: "Home",
-        icon: "fa fa-home",
-    },
-    {
-        id: "explore",
-        path: "../ExploreScreen/explore.html",
-        label: "Explore",
-        icon: "fa fa-hashtag"
-    },
-    {
-        id: "notifications",
-        path: "../notifications.html",
-        label: "Notifications",
-        icon: "fa fa-bell"
-    },
-    {
-        id: "messages",
-        path: "../messages.html",
-        label: "Messages",
-        icon: "fa fa-envelope"
-    },
-    {
-        id: "bookmarks",
-        path: "../bookmarks.html",
-        label: "Bookmarks",
-        icon: "fa fa-bookmark"
-    },
-    {
-        id: "lists",
-        path: "../lists.html",
-        label: "Lists",
-        icon: "fa fa-list"
-    },
-    {
-        id: "profile",
-        path: "../profile.html",
-        label: "Profile",
-        icon: "fa fa-user"
-    },
-];
-
 const NavigationSidebar = (active) => {
-    return `
-          <div class="list-group">
-              <a class="list-group-item" href="/">
-                  <i class="fab fa-twitter"></i></a>
-                ${links.map((l) => {
-        return `
-                  <a
-                    href="${l.path || "#"}"
-                    class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center ${
-            l.id === active ? "active" : ""
-        }"
-                    aria-current="${l.id === active ? "true" : "false"}"
-                    ><i class="${l.icon} me-0 me-xl-2"></i
-                    ><span class="d-none d-xl-inline-block">${l.label}</span></a
-                  >
-                  `;
-    }).join('')}
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action d-flex justify-content-center justify-content-xl-start align-items-center"
-                  ><span class="fa-stack small me-0 me-xl-2">
-                    <i class="fas fa-circle fa-stack-2x"></i>
-                    <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i> </span
-                  ><span class="d-none d-xl-inline-block">More</span></a
-                >
-          </div>
-          <div class="d-grid mt-2">
-              <a href="tweet.html"
-                 class="btn btn-primary btn-block rounded-pill">
-                  Tweet</a>
-          </div>
-  `;
-};
+    return(`
+        <div class="list-group">
+                <span class="list-group-item px-0">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="col-1 fab fa-twitter fa-stack-1x"></i>
+                    </span>
+                </span>
+                <a href="../HomeScreen/home.html" class="list-group-item list-group-item-action px-0 ${active === 'Home' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-house-user fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Home</span>
+                </a>
+                <a href="../ExploreScreen/explore.html" class="list-group-item list-group-item-action px-0 ${active === 'Explore' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-hashtag fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Explore</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 ${active === 'Notifications' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-bell fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Notifications</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 ${active === 'Message' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-comment fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Messages</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 ${active === 'Bookmarks' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-bookmark fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Bookmarks</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 ${active === 'Lists' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-list fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Lists</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 ${active === 'Profile' ? 'active': ''}">
+                    <span class="col-1 fa-stack fa-1x">
+                        <i class="fas fa-user fa-stack-1x"></i>
+                    </span>
+                    <span class="col-11 px-1 d-none d-xl-inline text-dark">Profile</span>
+                </a>
+                <a href="#" class="list-group-item list-group-item-action px-0 ${active === 'More' ? 'active': ''}">
+                        <span class="col-1 fa-stack fa-1x m-0">
+                            <i class="fas fa-circle fa-stack-1x"></i>
+                            <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <span class="col-11 px-1 d-none d-xl-inline text-dark">More</span>
+                </a>
+            </div>
+            <div class="d-grid mt-2">
+                <a href="tweet.html" class="btn btn-primary btn-block rounded-pill">Tweet</a>
+            </div>
+    `);
+}
 export default NavigationSidebar;

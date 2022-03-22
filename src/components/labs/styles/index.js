@@ -28,5 +28,5 @@ const Styles = () => {
                 Blue background</div>
         </div>
     );
-};
+}
 export default Styles;

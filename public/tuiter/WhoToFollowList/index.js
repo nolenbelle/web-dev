@@ -1,15 +1,20 @@
 import WhoToFollowListItem from "./WhoToFollowListItem.js";
 import who from "./who.js";
+
 const WhoToFollowList = () => {
-    return `
-            <ul class="list-group">
-            <li
-              class="list-group-item d-flex justify-content-between align-items-center fw-bold"
-            >
-              Who to follow
+    return(`
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h6 class="fw-bold mb-0">
+                    Who to follow
+                </h6>
             </li>
-            ${who.map((w) => WhoToFollowListItem(w)).join("")}
-            </ul>
-`;
-};
-export default WhoToFollowList;
+            ${who.map(who => {
+                            return(WhoToFollowListItem(who));
+                            }
+                    ).join('')       
+            }
+        </ul>
+    `);
+}
+export default WhoToFollowList
